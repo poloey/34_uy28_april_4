@@ -5,7 +5,7 @@
         "fzaninotto/faker": "^1.7"
     },
     "autoload": {
-      "files": ["db.php"],
+      "files": ["db.php", "functions.php"],
       "classmap": ["models"]
     }
 

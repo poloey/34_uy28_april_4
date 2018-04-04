@@ -12,7 +12,7 @@ Manager::schema()->dropIfExists('users');
 Manager::schema()->create('users', function($t) {
   $t->increments('id');
   $t->string('name');
-  $t->string('email');
+  $t->string('email')->unique();
   $t->string('password');
   $t->timestamps();
 });

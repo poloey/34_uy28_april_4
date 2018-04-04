@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-</head>
-<body>
-  
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-</body>
-</html>
+<?php 
+
+require 'vendor/autoload.php';
+
+
+// echo is_email_exists('dhaka@gmail.com') ? 'email exists' : 'email not exists';
+$user = User::where('email', 'sujon@gmail.com')->first();
+echo $user->name;

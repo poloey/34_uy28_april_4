@@ -15,5 +15,23 @@
         <a class="nav-link" href="/contact">contact</a>
       </li>
     </ul>
+    <ul class="navbar-nav ">
+      <?php if (isset($_SESSION['user'])) :  ?>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard/home">
+            <?php 
+              print($_SESSION['user']['name']);
+             ?>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+      <?php else:  ?>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+      <?php endif;  ?>
+    </ul>
   </div>
 </nav>
